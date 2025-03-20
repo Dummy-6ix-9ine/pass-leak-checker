@@ -1,178 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Leak Checker</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Leak Checker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>Has your password <span style="color: red;">leaked?</span></h1>
-            <p>Enter your password to check if it has leaked. Having a leaked password creates the risk of identity
-                theft, financial damages, and worse!</p>
-        </header>
+  <div class="container">
+    <!-- Existing Content -->
+    <h1>Has your password <span style="color: red;">leaked?</span></h1>
+    <p>Enter your password to check if it has leaked. Having a leaked password creates the risk of identity theft, financial damages, and worse!</p>
 
-        <!-- Input Section -->
-        <section class="input-section">
-            <input type="password" id="passwordInput" placeholder="Your Password">
-            <button id="checkButton">Check now</button>
-        </section>
-
-        <!-- Result Section -->
-        <section class="result-section hidden">
-            <div class="result-safe">
-                <i class="fas fa-check-circle"></i>
-                <h2>You are safe for now</h2>
-            </div>
-            <p>There's still a possibility of your data being leaked to an unknown database.</p>
-        </section>
-
-        <!-- Security Tips -->
-        <section class="security-tips">
-            <h3>Take 2 steps for ultimate account security</h3>
-            <div class="steps">
-                <div class="step">
-                    <img src="step2.svg" alt="Lock Icon">
-                    <h4>STEP 1</h4>
-                    <p>Get a <a href="https://www.lastpass.com/" target="_blank">password manager</a> – it will help you
-                        create and store unique passwords for every account you have.</p>
-                </div>
-                <div class="step">
-                    <img src="step3.svg" alt="Device Icon">
-                    <h4>STEP 2</h4>
-                    <p>Enable two-factor authentication (2FA) everywhere. It will act as a safeguard if your password
-                        becomes compromised.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Statistics -->
-        <section class="statistics">
-            <h2>33,028,051,158</h2>
-            <p>Exposed Passwords</p>
-        </section>
-
-        <!-- Breaches Section -->
-        <section class="breaches-section">
-            <div class="left-column">
-                <h2>LATEST BREACHES:</h2>
-                <ul>
-                    <li>
-                        <img src="linkedin-icon.png" alt="LinkedIn Icon">
-                        <span>700 Thousand</span>
-                        <a href="#">LinkedIn Accounts</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                    <li>
-                        <img src="facebook-icon.png" alt="Facebook Icon">
-                        <span>500 Million</span>
-                        <a href="#">Facebook Accounts</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                    <li>
-                        <img src="weleakinfo-icon.png" alt="WeLeakInfo Icon">
-                        <span>11 Thousand</span>
-                        <a href="#">WeLeakInfo files</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                </ul>
-            </div>
-            <div class="right-column">
-                <h2>LARGEST BREACHES:</h2>
-                <ul>
-                    <li>
-                        <img src="folder-icon.png" alt="Folder Icon">
-                        <span>3.2 Billion</span>
-                        <a href="#">Comb Accounts</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                    <li>
-                        <img src="folder-icon.png" alt="Folder Icon">
-                        <span>1.4 Billion</span>
-                        <a href="#">The BreachCompilation Accounts</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                    <li>
-                        <img src="facebook-icon.png" alt="Facebook Icon">
-                        <span>500 Million</span>
-                        <a href="#">Facebook Accounts</a>
-                        <i class="fas fa-arrow-right"></i>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- How Does This Tool Work? -->
-        <section class="how-it-works">
-            <div class="content">
-                <h2>How does this tool work?</h2>
-                <p>
-                    Our free online tool scans a collection of 33 billion leaked passwords. To check if your password is
-                    compromised:
-                </p>
-                <ol>
-                    <li>
-                        Enter the password you want to check in the search bar.
-                        <p><em>*We won’t save it – the tool only uses the password to generate a hash!</em></p>
-                    </li>
-                    <li>
-                        The tool will cross-reference the hash with our list of breached databases.
-                    </li>
-                    <li>
-                        The search results will show how many times the password was found in leaked databases.
-                    </li>
-                </ol>
-            </div>
-            <div class="image">
-                <img src="img1.png" alt="Checkmark Icon">
-            </div>
-        </section>
-
-        <!-- What Could Happen if Your Password is Leaked? -->
-        <section class="password-leak-consequences">
-            <div class="image">
-                <img src="img2.png" alt="Lock Icon">
-            </div>
-            <div class="content">
-                <h2>What could happen to you if your password is leaked?</h2>
-                <p>
-                    Even with one exposed password, cybercriminals can:
-                </p>
-                <ul>
-                    <li>Take over your other online accounts</li>
-                    <li>Impersonate you online</li>
-                    <li>Blackmail you</li>
-                    <li>Sell your private information</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- How to Get to the Safe Side? -->
-        <section class="safe-side">
-            <div class="content">
-                <h2>How to get to the safe side?</h2>
-                <p>
-                    To stay on the safe side, you can take these steps:
-                </p>
-                <ol>
-                    <li>Create new passwords for all your accounts. Our password generator will help you out.</li>
-                    <li>Use a password manager to store all the unique passwords you have for each website.</li>
-                    <li>Enable two-factor authentication.</li>
-                </ol>
-            </div>
-            <div class="image">
-                <img src="img3.png" alt="Shield Icon">
-            </div>
-        </section>
+    <div class="input-section">
+      <input type="password" id="passwordInput" placeholder="Your Password">
+      <button id="checkButton">Check now</button>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <div id="resultSection" class="result-section hidden">
+      <div class="result-safe">
+        <i class="fas fa-check-circle"></i>
+        <h2>You are safe for now</h2>
+      </div>
+      <p>There's still a possibility of your data being leaked to an unknown database.</p>
+    </div>
 
+    <div class="security-tips">
+      <h3>Take 2 steps for ultimate account security</h3>
+      <div class="steps">
+        <div class="step">
+          <img src="step2.svg" alt="Lock Icon">
+          <h4>STEP 1</h4>
+          <p>Get a <a href="https://www.lastpass.com/" target="_blank">password manager</a> – it will help you create and store unique passwords for every account you have.</p>
+        </div>
+        <div class="step">
+          <img src="step3.svg" alt="Device Icon">
+          <h4>STEP 2</h4>
+          <p>Enable two-factor authentication (2FA) everywhere. It will act as a safeguard if your password becomes compromised.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="statistics">
+      <h2>33,028,051,158</h2>
+      <p>Exposed Passwords</p>
+    </div>
+
+    <!-- Latest Breaches and Largest Breaches -->
+    <div class="breaches-section">
+      <div class="left-column">
+        <h2>LATEST BREACHES:</h2>
+        <ul>
+          <li>
+            <img src="linkedin-icon.png" alt="LinkedIn Icon">
+            <span>700 Thousand</span>
+            <a href="https://cybernews.com/news/stolen-data-of-500-million-linkedin-users-being-sold-online-2-million-leaked-as-proof-2/" target="_blank">LinkedIn Accounts</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+          <li>
+            <img src="facebook-icon.png" alt="Facebook Icon">
+            <span>500 Million</span>
+            <a href="https://cybernews.com/news/leaker-says-they-are-offering-private-details-of-500-million-facebook-users/" target="_blank">Facebook Accounts</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+          <li>
+            <img src="weleakinfo-icon.png" alt="WeLeakInfo Icon">
+            <span>11 Thousand</span>
+            <a href="https://cybernews.com/security/hacker-on-hacker-crime-personal-information-of-24000-illegal-data-buyers-put-for-sale-online/" target="_blank">WeLeakInfo files</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="right-column">
+        <h2>LARGEST BREACHES:</h2>
+        <ul>
+          <li>
+            <img src="folder-icon.png" alt="Folder Icon">
+            <span>3.2 Billion</span>
+            <a href="https://cybernews.com/news/largest-compilation-of-emails-and-passwords-leaked-free/" target="_blank">Comb Accounts</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+          <li>
+            <img src="folder-icon.png" alt="Folder Icon">
+            <span>1.4 Billion</span>
+            <a href="https://cybernews.com/news/largest-compilation-of-emails-and-passwords-leaked-free/" target="_blank">The BreachCompilation Accounts</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+          <li>
+            <img src="facebook-icon.png" alt="Facebook Icon">
+            <span>500 Million</span>
+            <a href="https://cybernews.com/news/leaker-says-they-are-offering-private-details-of-500-million-facebook-users/" target="_blank">Facebook Accounts</a>
+            <i class="fas fa-arrow-right"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- How Does This Tool Work? -->
+    <div class="how-it-works">
+      <div class="content">
+        <h2>How does this tool work?</h2>
+        <p>
+          Our free online tool scans a collection of 33 billion leaked passwords. To check if your password is compromised:
+        </p>
+        <ol>
+          <li>
+            Enter the password you want to check in the search bar.
+            <p><em>*We won’t save it – the tool only uses the password to generate a hash!</em></p>
+          </li>
+          <li>
+            The tool will cross-reference the hash with our list of breached databases.
+          </li>
+          <li>
+            The search results will show how many times the password was found in leaked databases.
+          </li>
+        </ol>
+      </div>
+      <div class="image">
+        <img src="img1.png" alt="Checkmark Icon">
+      </div>
+    </div>
+
+    <!-- What Could Happen if Your Password is Leaked? -->
+    <div class="password-leak-consequences">
+      <div class="image">
+        <img src="img2.png" alt="Lock Icon">
+      </div>
+      <div class="content">
+        <h2>What could happen to you if your password is leaked?</h2>
+        <p>
+          Even with one exposed password, cybercriminals can:
+        </p>
+        <ul>
+          <li>Take over your other online accounts</li>
+          <li>Impersonate you online</li>
+          <li>Blackmail you</li>
+          <li>Sell your private information</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- How to Get to the Safe Side? -->
+    <div class="safe-side">
+      <div class="content">
+        <h2>How to get to the safe side?</h2>
+        <p>
+          To stay on the safe side, you can take these steps:
+        </p>
+        <ol>
+          <li>Create new passwords for all your accounts. Our password generator will help you out.</li>
+          <li>Use a password manager to store all the unique passwords you have for each website.</li>
+          <li>Enable two-factor authentication.</li>
+        </ol>
+      </div>
+      <div class="image">
+        <img src="img3.png" alt="Shield Icon">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
